@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Categorias</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/agregarCategoria}" th:object="${categoria}" method="post">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" th:field="*{nombre}" id="nombre">
+        
+    <input type="submit" value="Crear Categoria"> 
+</form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Workshops</title>
+</head>
+<body>
+<span th:text="${workshop.id}">Id</span>
+<form action="#" th:action="@{/agregarTarea/{id}(id=${workshop.id})}" th:object="${tarea}" method="post">
+
+    <label for="name">Nombre</label>
+    <input type="text" th:field="*{name}" id="name">
+    
+    <label for="descripcion">Descripcion</label>
+    <input type="text" th:field="*{descripcion}" id="descripcion">
+    
+    <label for="descripcion">Texto</label>
+    <input type="text" th:field="*{texto}" id="texto">
+
+    <label for="tiempo">Duracion</label>
+    <input type="number" th:field="*{tiempo}" id="tiempo">
+        
+    <input type="submit" value="Agregar tarea">   
+</form>
+</body>
+</html>
